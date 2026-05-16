@@ -1,5 +1,5 @@
 "use client"
-import { UserDetailsContext } from '@/context/UserDetailsContext';
+import { UserDetailContext } from '@/context/UserDetailContext';
 import { useUser } from '@clerk/nextjs';
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
@@ -24,9 +24,9 @@ function Provider({
 
     return (
         <div>
-            <UserDetailsContext.Provider value={{ userDetail, setUserDetail }}>
+            <UserDetailContext.Provider value={{ userDetail, setUserDetail }}>
                 {children}
-            </UserDetailsContext.Provider>
+            </UserDetailContext.Provider>
         </div>
     )
 }
